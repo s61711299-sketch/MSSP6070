@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPiDV/rOwQQvqRBY2oGyhLp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/s61711299-sketch/MSSP6070/blob/main/Week03\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**a**\n",
+        "The code in a function only executes when called.\n",
+        "**b**\n",
+        "There is only 1 global scope in the Python system, but local scope will be created each time when the function is called.\n",
+        "**c**\n",
+        "The variables in the local scopes will be deleted when the function call returns.\n",
+        "**d**\n",
+        "Use 'try...expect'."
+      ],
+      "metadata": {
+        "id": "9RXQPScAV9y6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**The Collatz Sequence**"
+      ],
+      "metadata": {
+        "id": "TFKhNzHhdKb6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def collatz(n): #define the function\n",
+        "  if n%2==0: #number is even\n",
+        "    output=n//2\n",
+        "  else: #number is odd\n",
+        "    output=n*3+1\n",
+        "  print(output,end=' ')\n",
+        "  return output\n",
+        "n=int(input('number')) #get input\n",
+        "print(n,end=' ')\n",
+        "while n!=1: #function until result equals to 1\n",
+        "  n=collatz(n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-Y_wB6NYdT03",
+        "outputId": "57df66df-9fd5-43bd-b23d-d40620dfd68e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "number3\n",
+            "3 10 5 16 8 4 2 1 "
+          ]
+        }
+      ]
+    }
+  ]
+}
